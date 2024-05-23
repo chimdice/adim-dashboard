@@ -29,11 +29,37 @@ body {
     grid-area: 3/3/4/4;
 }
 
+/*Header*/
 #header {
     background: var(--white);
     grid-area: 2/2/3/4;
+    display: grid;
+    grid-template-columns: 1fr 6fr 2fr 2fr 2fr;
+    margin-left: 70px;
+    margin-right: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
+.header-text p {
+    margin: 0px;
+    font-weight: bold;
+}
+
+.two  {
+    font-size: 30px;
+}
+
+#header button {
+    height: 50%;
+    width: 75%;
+    color: var(--white);
+    background-color: var(--cyan-blue);
+    border-radius: 30px;
+    border:none;
+}
+
+/*Search bar*/
 #searchbar {
     background: var(--white);
     grid-area: 1/2/2/4;
