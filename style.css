@@ -3,14 +3,14 @@
     --cyan-blue: #155e75;
     --gray: #d6d3d1;
     --white: white;
-
+    --orange: #fdba74;
 }
 
 body {
     height: 100svh;
     display:grid;
     grid-template-columns: 3fr 10fr 3fr;
-    grid-template-rows: 1fr 1fr 8fr;
+    grid-template-rows: 1fr 1fr 12fr;
     margin: 0px;
 }
 
@@ -18,10 +18,46 @@ body {
     background: var(--cyan-blue);
     grid-area: 1/1/4/2;
 }
-
+/*Project body*/
 #project-body {
     background-color: var(--gray);
     grid-area: 3/2/4/3;
+}
+
+#project-body .top-text{
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.project-content {
+    display:grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    grid-template-rows: repeat(3,minmax(0,1fr));
+    gap: 20px;
+    margin: 20px;
+}
+
+.project {
+    background-color: var(--white);
+    border-left: 10px solid var(--orange);
+    box-shadow: 0px 5px rgba(0,0,0,25%);
+    padding: 10px;
+}
+
+.project p:nth-last-of-type(2) {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.project p:nth-last-of-type(1) {
+    font-size: 12px;
+}
+
+.img-container {
+    display: flex;
+    justify-content: right;
+    gap: 10px
 }
 
 #side-body {
@@ -39,6 +75,7 @@ body {
     margin-right: 30px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .header-text p {
@@ -82,4 +119,8 @@ body {
     vertical-align: text-top;
     margin: 0px;
     font-size: 30px;
+}
+
+img {
+    width: 30px;
 }
