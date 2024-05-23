@@ -14,10 +14,52 @@ body {
     margin: 0px;
 }
 
+/*Side bar*/
 #sidebar {
     background: var(--cyan-blue);
     grid-area: 1/1/4/2;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr 3fr;
+    color: var(--white);
+    gap: 20px;
 }
+
+#sidebar img {
+    filter: invert(99%) sepia(1%) saturate(862%) hue-rotate(98deg) brightness(110%) contrast(100%);
+}
+#top-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+#middle-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+#middle-sidebar h2,
+#bottom-sidebar h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#bottom-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    row-gap: 5px
+}
+
 /*Project body*/
 #project-body {
     background-color: var(--gray);
